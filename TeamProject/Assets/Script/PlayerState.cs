@@ -21,4 +21,16 @@ public class PlayerState : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            playerMP.value -= 0.1f;
+        }
+        else if(collision.gameObject.CompareTag("Obstacle"))
+        {
+            playerMP.value -= 0.05f;
+        }
+    }
 }
