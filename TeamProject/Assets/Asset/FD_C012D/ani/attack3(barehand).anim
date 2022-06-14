@@ -2449,7 +2449,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: 0Shade/7Body/3LLeg
+    path: 0Shade/7Body/5RLeg/6RKnee
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2459,7 +2459,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: 0Shade/7Body/3LLeg
+    path: 0Shade/7Body/5RLeg/6RKnee
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2469,7 +2469,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: 0Shade/7Body/3LLeg
+    path: 0Shade/7Body/5RLeg/6RKnee
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2509,7 +2509,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: 0Shade/7Body/5RLeg/6RKnee
+    path: 0Shade/7Body/3LLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2519,7 +2519,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: 0Shade/7Body/5RLeg/6RKnee
+    path: 0Shade/7Body/3LLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2529,7 +2529,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: 0Shade/7Body/5RLeg/6RKnee
+    path: 0Shade/7Body/3LLeg
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

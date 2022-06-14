@@ -7,6 +7,7 @@ TagManager:
   - PlatForm
   - Enemy
   - Obstacle
+  - AttackRange
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Skill
+    uniqueID: 1090580123
+    locked: 0
+  - name: Player
+    uniqueID: 1975107369
     locked: 0

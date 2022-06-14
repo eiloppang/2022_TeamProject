@@ -9,14 +9,11 @@ public class CharMove : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;
 
-    //int skillCount;
-
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //skillCount = 1;
     }
 
     void Update()
@@ -42,13 +39,30 @@ public class CharMove : MonoBehaviour
         else
             anim.SetBool("IsWalk", true);
 
+        //Attack Animation
         if (Input.GetKeyUp(KeyCode.Z))
         {
-            anim.SetBool("Attack", true);
+            anim.SetTrigger("Attack");
         }
-        else
+
+        //Magic1 Animation
+        if(Input.GetKeyUp(KeyCode.X))
         {
-            anim.SetBool("Attack", false);
+            anim.SetTrigger("Magic1");
+        }
+
+        //Magic2 Animation
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            anim.SetTrigger("Magic2");
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            anim.SetTrigger("Hit");
         }
     }
 
