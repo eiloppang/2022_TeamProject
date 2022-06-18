@@ -7,14 +7,14 @@ public class BossAnim : MonoBehaviour
 {
     Animator anim;
 
-    float randomAni;
+    //float randomAni;
     float randomCount;
     float timer;
 
     bool isRandomAnimationPermit = true; //* 강약풍 애니메이션 랜덤결정을 한번만 하게 하는 변수
-    [HideInInspector] public bool isStrongAndWeakAnimation = true; //* 강약풍 애니메이션 진행할 수 있는지 확인하는 변수
+    [HideInInspector] public bool isBreakAttackAnimation = true; //* 강약풍 애니메이션 진행할 수 있는지 확인하는 변수
 
-    public bool isAttack, isBreak;
+    public bool isAttack, isBreak, isHit;
 
     bool initTimerAndRandomCount = true;
     bool isHitAnimation = false;
@@ -38,12 +38,15 @@ public class BossAnim : MonoBehaviour
         else if(hpSlider.value == 0.0f)
         {
             anim.SetTrigger("IsDead");
+            isBreak = false;
+            isAttack = false;
+            isHit = false;
         }
     }
 
     private void CatBossAnimation()
     {
-        if(isStrongAndWeakAnimation == true)
+        if(isBreakAttackAnimation == true)
         {
             timer += Time.deltaTime;
             if(timer >= 2.0f)
@@ -55,22 +58,23 @@ public class BossAnim : MonoBehaviour
                         anim.SetTrigger("IsAttack");
                         isBreak = false;
                         isAttack = true;
-                        //isTired = false;
-                        //Debug.Log("약풍");
+                        isHit = false;
                     }
                     else
                     {
                         anim.SetTrigger("IsBreak");
                         isBreak = true;
                         isAttack = false;
+                        isHit = false;
                     }
-                    isStrongAndWeakAnimation = false;
+                    isBreakAttackAnimation = false;
                 }
                 else
                 {
                     if(isHitAnimation == true)
                     {
                         anim.SetTrigger("IsHit");
+                        isHit = true;
                         isBreak = false;
                         isAttack = false;
                     }
@@ -80,7 +84,7 @@ public class BossAnim : MonoBehaviour
                         {
                             timer = 0;
                             randomCount = Random.Range(3.0f, 7.0f);
-                            isStrongAndWeakAnimation = true;
+                            isBreakAttackAnimation = true;
                             initTimerAndRandomCount = false;
                         }
                     }
