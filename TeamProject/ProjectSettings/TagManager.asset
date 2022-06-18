@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Obstacle
   - AttackRange
+  - HPUP
+  - MPUP
   layers:
   - Default
   - TransparentFX

@@ -135,6 +135,7 @@ m_ResolvedPackages:
     - 8.0.1
     - 8.0.2
     - 9.0.0-pre.1
+    - 9.0.0-pre.3
     compatible:
     - 6.0.3
     - 6.0.4
@@ -355,6 +356,7 @@ m_ResolvedPackages:
     - 7.0.0
     - 7.0.1
     - 8.0.0-pre.1
+    - 8.0.0-pre.3
     compatible:
     - 5.0.3
     - 5.0.4
@@ -3889,6 +3891,7 @@ m_ResolvedPackages:
     - 7.0.0-pre.4
     - 7.0.0
     - 8.0.0-pre.1
+    - 8.0.0-pre.2
     compatible:
     - 5.0.0
     verified: 5.0.0

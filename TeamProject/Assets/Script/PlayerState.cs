@@ -14,6 +14,9 @@ public class PlayerState : MonoBehaviour
 
     Animator anim;
 
+    public GameObject magicOne;
+    public GameObject magicTwo;
+
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +66,18 @@ public class PlayerState : MonoBehaviour
             fillHP.SetActive(false);
             anim.SetTrigger("IsDead");
             //æ¿ √º¿Œ¡ˆ
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("HPUP"))
+        {
+            playerHP.value += 0.2f;
+        }
+        else if(collision.gameObject.CompareTag("MPUP"))
+        {
+            playerMP.value += 0.2f;
         }
     }
 }
