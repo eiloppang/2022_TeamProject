@@ -42,7 +42,7 @@ public class BossAnim : MonoBehaviour
         {
             CatBossAnimation();
         }
-        else if(hpSlider.value == 0.0f)
+        else if(hpSlider.value <= 0.0f)
         {
             hpFill.SetActive(false);
             anim.SetTrigger("IsDead");
@@ -101,10 +101,24 @@ public class BossAnim : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("PAttack") || collision.gameObject.CompareTag("PMagicX") || collision.gameObject.CompareTag("PMagicC"))
+        if(collision.gameObject.CompareTag("PAttack"))
         {
             isHitAnimation = true;
             isBreakAttackAnimation = false;
+            hpSlider.value -= 0.05f;
         }
+        else if(collision.gameObject.CompareTag("PMagicX"))
+        {
+            isHitAnimation = true;
+            isBreakAttackAnimation = false;
+            hpSlider.value -= 0.1f;
+        }
+        else if(collision.gameObject.CompareTag("PMagicC"))
+        {
+            isHitAnimation = true;
+            isBreakAttackAnimation = false;
+            hpSlider.value -= 0.15f;
+        }
+        
     }
 }
