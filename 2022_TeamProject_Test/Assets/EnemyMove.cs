@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMove : MonoBehaviour
 {
+    // private GameObject HPSlider;
     Rigidbody2D rigid;
     Animator anim;
     SpriteRenderer spriteRenderer;
     public int nextMove;
     
-
-
     // Start is called before the first frame update
     void Awake()
     {
+        // HPSlider = GameObject.Find("RockEnemy/Canvas/HPSlider");
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -26,6 +27,7 @@ public class EnemyMove : MonoBehaviour
     void FixedUpdate()
     {
         rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
+        // HPSlider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1.2f, 0));
     }
 
     void Think()
