@@ -7,9 +7,12 @@ TagManager:
   - PlatForm
   - Enemy
   - Obstacle
-  - AttackRange
   - HPUP
   - MPUP
+  - PAttack
+  - PMagicX
+  - PMagicC
+  - DeadLine
   layers:
   - Default
   - TransparentFX
@@ -50,6 +53,9 @@ TagManager:
   - name: Skill
     uniqueID: 1090580123
     locked: 0
-  - name: Player
+  - name: Obstcles
     uniqueID: 1975107369
+    locked: 0
+  - name: Player
+    uniqueID: 1605481505
     locked: 0
