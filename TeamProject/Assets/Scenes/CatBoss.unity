@@ -409,6 +409,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef7dbc3fcb9a6b4db5e157a8e96c3df, type: 3}
+--- !u!1 &142936121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142936122}
+  - component: {fileID: 142936123}
+  m_Layer: 0
+  m_Name: Stone1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142936122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142936121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16, y: -7, z: -13.538376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 394657025}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &142936123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142936121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11513ed02b8a56745abdd5aab8d3b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Barrier:
+  - {fileID: 7380021214332121774, guid: b5a2373fc48650b4580f6a6de27c95d8, type: 3}
+  - {fileID: 1679855272627886965, guid: 9b5495a2f78728f47a68ca60bda83f02, type: 3}
+  - {fileID: 6180757560389366857, guid: 056dd263af47a534a930e0403564cf78, type: 3}
+  bossScript: {fileID: 2073355450}
 --- !u!1 &174784580
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +839,9 @@ Transform:
   - {fileID: 755493510}
   - {fileID: 1945121046}
   - {fileID: 1189045804}
+  - {fileID: 142936122}
+  - {fileID: 990570635}
+  - {fileID: 2102066335}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1838,6 +1889,54 @@ MonoBehaviour:
   - {fileID: 3490591663198489113, guid: b8aeb55a2ff4b6849bbb05ebd5e64654, type: 3}
   - {fileID: 5879093282735096298, guid: 8830b06979df41240b9e87a3a0d974f1, type: 3}
   - {fileID: 8017251253242993308, guid: 19af1695b09ac824e8c15c4e165bed03, type: 3}
+  bossScript: {fileID: 2073355450}
+--- !u!1 &990570634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990570635}
+  - component: {fileID: 990570636}
+  m_Layer: 0
+  m_Name: Stone2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990570635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990570634}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16, y: -2, z: -13.538376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 394657025}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990570636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990570634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11513ed02b8a56745abdd5aab8d3b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Barrier:
+  - {fileID: 7380021214332121774, guid: b5a2373fc48650b4580f6a6de27c95d8, type: 3}
+  - {fileID: 1679855272627886965, guid: 9b5495a2f78728f47a68ca60bda83f02, type: 3}
+  - {fileID: 6180757560389366857, guid: 056dd263af47a534a930e0403564cf78, type: 3}
   bossScript: {fileID: 2073355450}
 --- !u!1 &1008275111
 GameObject:
@@ -4730,6 +4829,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073961848}
   m_CullTransparentMesh: 1
+--- !u!1 &2102066334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102066335}
+  - component: {fileID: 2102066336}
+  m_Layer: 0
+  m_Name: Stone3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2102066335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102066334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16, y: 3, z: -13.538376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 394657025}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2102066336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102066334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11513ed02b8a56745abdd5aab8d3b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Barrier:
+  - {fileID: 7380021214332121774, guid: b5a2373fc48650b4580f6a6de27c95d8, type: 3}
+  - {fileID: 1679855272627886965, guid: 9b5495a2f78728f47a68ca60bda83f02, type: 3}
+  - {fileID: 6180757560389366857, guid: 056dd263af47a534a930e0403564cf78, type: 3}
+  bossScript: {fileID: 2073355450}
 --- !u!1 &2104147746
 GameObject:
   m_ObjectHideFlags: 0
