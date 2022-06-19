@@ -41,9 +41,9 @@ public class BossAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(Vector2.left * speed * Time.deltaTime);
+        hpSlider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 3.0f, 0));
 
-        if(hpSlider.value != 0.0f)
+        if (hpSlider.value != 0.0f)
         {
             CatBossAnimation();
         }

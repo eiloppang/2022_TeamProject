@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerState : MonoBehaviour
 {
     //ÇÃ·¹ÀÌ¾î hp
     public Slider playerHP;
     public GameObject fillHP;
-    //ÇÃ·¹ÀÌ¾î mp
-    public Slider playerMP;
-    public GameObject fillMP;
+    public GameObject hpText;
 
     Animator anim;
 
     public GameObject magicOne;
     public GameObject magicTwo;
+
+    public int coinCount;
+    public Text coinCountText;
 
 
     // Start is called before the first frame update
@@ -23,34 +25,21 @@ public class PlayerState : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         fillHP.SetActive(true);
-        fillMP.SetActive(true);
+
+        coinCount = 0;
+        coinCountText.text = "X " + coinCount;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerMP.value > 0)
-        {
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                playerMP.value = -0.1f;
-            }
-
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                playerMP.value = -0.2f;
-            }
-        }
-        else if(playerMP.value <= 0)
-        {
-            fillMP.SetActive(false);
-            //¹º°¡ ÇÏ°ÚÁö...
-        }
+        playerHP.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 4.0f, 0));
+        hpText.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 4.0f, 0));
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(playerHP.value > 0)
+        if (playerHP.value > 0)
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
@@ -61,25 +50,53 @@ public class PlayerState : MonoBehaviour
                 playerHP.value -= 0.05f;
             }
         }
-        else if(playerHP.value <= 0)
+        else if (playerHP.value <= 0)
         {
             fillHP.SetActive(false);
             anim.SetTrigger("IsDead");
-            //¾À Ã¼ÀÎÁö
+            Invoke("MoveToFail", 1.5f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerHP.value > 0)
+        {
+            if (collision.gameObject.CompareTag("Candy"))
+            {
+                playerHP.value -= 0.1f;
+            }
+            if (collision.gameObject.CompareTag("Stone"))
+            {
+                playerHP.value -= 0.05f;
+            }
+        }
+        else if (playerHP.value <= 0)
+        {
+            fillHP.SetActive(false);
+            anim.SetTrigger("IsDead");
+            Invoke("MoveToFail", 1.0f);
         }
 
         if (collision.gameObject.CompareTag("HPUP"))
         {
             playerHP.value += 0.2f;
         }
-        else if (collision.gameObject.CompareTag("MPUP"))
+
+        if(collision.gameObject.CompareTag("Coin"))
         {
-            playerMP.value += 0.2f;
+            coinCount = coinCount + 1;
+            coinCountText.text = "X " + coinCount;
         }
 
         if(collision.gameObject.CompareTag("DeadLine"))
         {
-            //»ç¸Á¾À
+            SceneManager.LoadScene("Fail");
         }
+    }
+
+    void MoveToFail()
+    {
+        SceneManager.LoadScene("Fail");
     }
 }

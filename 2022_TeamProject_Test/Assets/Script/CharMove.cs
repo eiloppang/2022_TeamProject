@@ -9,6 +9,8 @@ public class CharMove : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;
 
+    Vector2 jumpBlock = new Vector2(0, 40);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,5 +97,11 @@ public class CharMove : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("JumpBlock") && rigid.velocity.y < 0)
+            rigid.AddForce(jumpBlock, ForceMode2D.Impulse);
     }
 }

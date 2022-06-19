@@ -18,4 +18,12 @@ public class bulletManger : MonoBehaviour
 
         Destroy(gameObject, 3.0f);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -23,7 +23,7 @@ public class CameraMove : MonoBehaviour
         //플레이어 캐릭터를 쫓아다니는 카메라 x위치는 앞부분이 더 보일 수 있도록 4.0정도 앞으로, y위치는 위부분이 더 보일 수 있도로 2.5위로.
         if(targetChar.gameObject != null)
         {
-            targetPos.Set(targetChar.transform.position.x + 4.0f, targetChar.transform.position.y + 1.5f, this.transform.position.z);
+            targetPos.Set(targetChar.transform.position.x + 3.5f, targetChar.transform.position.y + 1.0f, this.transform.position.z);
 
             this.transform.position = Vector3.Lerp(this.transform.position, targetPos, speed * Time.deltaTime);
 
