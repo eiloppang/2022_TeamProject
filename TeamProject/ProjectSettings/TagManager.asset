@@ -14,6 +14,7 @@ TagManager:
   - PMagicC
   - DeadLine
   - EndPoint
+  - CatBoss
   layers:
   - Default
   - TransparentFX

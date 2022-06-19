@@ -22,8 +22,8 @@ public class BossAnim : MonoBehaviour
     float deadTimer;
     float waitTime;
 
-    public float speed;
-    bool isLeft = true;
+    //public float speed;
+    //bool isLeft = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class BossAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        //transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         if(hpSlider.value != 0.0f)
         {
@@ -124,20 +124,5 @@ public class BossAnim : MonoBehaviour
             isBreakAttackAnimation = false;
             hpSlider.value -= 0.15f;
         }
-
-        if(collision.gameObject.CompareTag("EndPoint"))
-        {
-            if(isLeft)
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                isLeft = false;
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 180, 0);
-                isLeft = true;
-            }
-        }
-        
     }
 }
