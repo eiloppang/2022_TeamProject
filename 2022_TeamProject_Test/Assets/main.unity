@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 109182351}
   - component: {fileID: 109182350}
   - component: {fileID: 109182349}
-  - component: {fileID: 109182348}
+  - component: {fileID: 109182356}
   m_Layer: 0
   m_Name: RockEnemy_1
   m_TagString: Untagged
@@ -1405,18 +1405,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &109182348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109182347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7491e3b5acb98b4bbb480958c39760a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &109182349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,6 +1568,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &109182356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109182347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445e718f4f344f94ea5b8bac2cf90699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114389516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,11 +2046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4881386325594014, guid: 1713af3811cfb9d4d82968643d5b8586, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.66
+      value: 68.98
       objectReference: {fileID: 0}
     - target: {fileID: 4881386325594014, guid: 1713af3811cfb9d4d82968643d5b8586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.82
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 4881386325594014, guid: 1713af3811cfb9d4d82968643d5b8586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14406,7 +14406,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311475675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adf6426c4c4210479197648efd059d1, type: 3}
+  m_Script: {fileID: 11500000, guid: acc0f72db30cd274d93dd211468407c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1311475677
