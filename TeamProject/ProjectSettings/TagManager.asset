@@ -13,6 +13,7 @@ TagManager:
   - PMagicX
   - PMagicC
   - DeadLine
+  - EndPoint
   layers:
   - Default
   - TransparentFX

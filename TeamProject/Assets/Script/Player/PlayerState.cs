@@ -48,7 +48,7 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(playerHP.value > 0)
         {
@@ -67,17 +67,19 @@ public class PlayerState : MonoBehaviour
             anim.SetTrigger("IsDead");
             //æ¿ √º¿Œ¡ˆ
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("HPUP"))
+        if (collision.gameObject.CompareTag("HPUP"))
         {
             playerHP.value += 0.2f;
         }
-        else if(collision.gameObject.CompareTag("MPUP"))
+        else if (collision.gameObject.CompareTag("MPUP"))
         {
             playerMP.value += 0.2f;
+        }
+
+        if(collision.gameObject.CompareTag("DeadLine"))
+        {
+            //ªÁ∏¡æ¿
         }
     }
 }
