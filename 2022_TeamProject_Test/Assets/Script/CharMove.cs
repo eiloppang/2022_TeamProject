@@ -8,7 +8,6 @@ public class CharMove : MonoBehaviour
     public float jumpPower;
     Rigidbody2D rigid;
     Animator anim;
-    Vector2 jumpBlock = new Vector2(0, 40);
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +38,32 @@ public class CharMove : MonoBehaviour
         }
         else
             anim.SetBool("IsWalk", true);
+
+        //Attack Animation
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            anim.SetTrigger("Attack");
+        }
+
+        //Magic1 Animation
+        if(Input.GetKeyUp(KeyCode.X))
+        {
+            anim.SetTrigger("Magic1");
+        }
+
+        //Magic2 Animation
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            anim.SetTrigger("Magic2");
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            anim.SetTrigger("Hit");
+        }
     }
 
     // Update is called once per frame
@@ -70,11 +95,5 @@ public class CharMove : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("JumpBlock") && rigid.velocity.y < 0)
-            rigid.AddForce(jumpBlock, ForceMode2D.Impulse);
     }
 }

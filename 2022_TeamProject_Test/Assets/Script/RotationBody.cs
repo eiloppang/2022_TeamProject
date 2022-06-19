@@ -14,9 +14,10 @@ public class RotationBody : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //좌우로 걸을 때 캐릭터 보여지는 이미지도 좌우반전
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.localScale = new Vector3(01, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if(Input.GetKeyDown(KeyCode.RightArrow))
         {

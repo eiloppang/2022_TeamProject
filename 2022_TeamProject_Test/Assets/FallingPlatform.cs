@@ -6,15 +6,15 @@ public class FallingPlatform : MonoBehaviour
 {
     public GameObject cloud;
     float span;
-    float delta;
-    float timer;
+    //float delta;
+    //float timer;
 
     Rigidbody2D rb;
 
     void Start()
     {
-        delta = 0.0f;
-        timer = 3.0f;
+        //delta = 0.0f;
+        //timer = 3.0f;
         cloud.gameObject.SetActive(true);
         rb = GetComponent<Rigidbody2D>();
 

@@ -34,7 +34,7 @@ public class EnemyMove : MonoBehaviour
     {
         nextMove = Random.Range(-1, 2);
         
-        anim.SetInteger("attack", nextMove);
+        // anim.SetInteger("attack", nextMove);
         
         if(nextMove != 0)
             spriteRenderer.flipX = nextMove == 1;
