@@ -15,6 +15,7 @@ TagManager:
   - DeadLine
   - EndPoint
   - CatBoss
+  - JumpBlock
   layers:
   - Default
   - TransparentFX
