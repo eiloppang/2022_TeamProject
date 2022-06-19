@@ -5,8 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlatForm
-  - Fly
   - Enemy
+  - Obstacle
+  - HPUP
+  - MPUP
+  - PAttack
+  - PMagicX
+  - PMagicC
+  - DeadLine
+  - EndPoint
+  - CatBoss
   - JumpBlock
   layers:
   - Default
